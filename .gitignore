@@ -70,3 +70,37 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+BuildAndBreak/Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/
+
+BuildAndBreak/Assets/TextMesh Pro/Examples & Extras/Scenes/
+
+BuildAndBreak/Assets/TextMesh Pro/Examples & Extras/
+
+BuildAndBreak/Assets/XR/
+
+BuildAndBreak/Assets/Plugins/
+
+BuildAndBreak/Assets/Scenes/BasicScene/
+
+BuildAndBreak/Assets/TextMesh Pro/
+
+BuildAndBreak/Assets/XRI/
+
+BuildAndBreak/Logs/
+
+BuildAndBreak/ProjectSettings/
+
+BuildAndBreak/Assets/Oculus Hands/Animations/
+
+BuildAndBreak/Assets/Oculus Hands/Models/
+
+BuildAndBreak/Library/
+
+BuildAndBreak/Temp/
+
+BuildAndBreak/Assets/Models/Brick_Hut.obj
+
+BuildAndBreak/Assets/Models/Brick_Table.obj
+
+BuildAndBreak/Assets/Models/Brick_TV.obj
