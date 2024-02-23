@@ -6,10 +6,6 @@ public class BrickSpawner : MonoBehaviour
     public GameObject prefabToSpawn; // Drag and drop the prefab in the Inspector
     public GameObject referenceObject; // Drag and drop the reference object in the Inspector
 
-    void Start()
-    {
-        SpawnObject();
-    }
 
     void SpawnObject()
     {
@@ -31,14 +27,7 @@ public class BrickSpawner : MonoBehaviour
                     childRenderer.material = referenceMaterial;
                 }
             }
-            else
-            {
-                Debug.LogError("Prefab must have a child with a Renderer component to apply the material.");
-            }
         }
-        else
-        {
-            Debug.LogError("Spawn point, prefab, and reference object must be assigned in the Inspector.");
-        }
+ 
     }
 }
