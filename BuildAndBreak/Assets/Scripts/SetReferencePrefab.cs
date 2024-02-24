@@ -15,7 +15,6 @@ public class SetReferencePrefab : MonoBehaviour
 
     public Transform spawnPoint;
     public GameObject referenceObject;
-    public Transform referenceSpawnPoint;
 
     // Define a list of prefab combinations
     public PrefabCombination[] prefabCombinations;
@@ -40,11 +39,21 @@ public class SetReferencePrefab : MonoBehaviour
 
         if (selectedCombination != null && selectedCombination.prefab != null)
         {
+            // Change the mesh of the reference object to match the selected prefab's mesh
+            MeshFilter referenceMeshFilter = referenceObject.GetComponent<MeshFilter>();
+            MeshFilter selectedPrefabMeshFilter = selectedCombination.prefab.GetComponentInChildren<MeshFilter>();
+
+            if (referenceMeshFilter != null && selectedPrefabMeshFilter != null)
+            {
+                referenceMeshFilter.mesh = selectedPrefabMeshFilter.sharedMesh;
+            }
+
             return selectedCombination.prefab;
         }
 
         return null;
     }
+
 
     public void SpawnObject()
     {
@@ -70,5 +79,10 @@ public class SetReferencePrefab : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void UpdateReferenceMesh()
+    {
+        SetPrefab();
     }
 }

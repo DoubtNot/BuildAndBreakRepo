@@ -411,7 +411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: d8992f8a88258e647a2d165e394f2d0e, type: 2}
-  targetObject: {fileID: 994532042}
+  targetObject: {fileID: 444660041}
 --- !u!65 &89603308
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -531,7 +531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: c4fc44323f0363e43814debd7a9e6738, type: 2}
-  targetObject: {fileID: 994532042}
+  targetObject: {fileID: 444660041}
 --- !u!65 &91676972
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1080,7 +1080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: 7ebe2f0cb1aa58d44826b22c3246e224, type: 2}
-  targetObject: {fileID: 994532042}
+  targetObject: {fileID: 444660041}
 --- !u!65 &188606712
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1411,7 +1411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: ffb57a063382b1346a7056dbc86f5931, type: 2}
-  targetObject: {fileID: 994532042}
+  targetObject: {fileID: 444660041}
 --- !u!65 &244302842
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1618,7 +1618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: d5f505fe106aebd458ffd691816a5e89, type: 2}
-  targetObject: {fileID: 994532042}
+  targetObject: {fileID: 444660041}
 --- !u!65 &256615345
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2474,7 +2474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: e217fa4ab2998cc4babb55ac645bf589, type: 2}
-  targetObject: {fileID: 994532042}
+  targetObject: {fileID: 444660041}
 --- !u!65 &345726389
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2742,7 +2742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: 0ecd8d68f82c1684db2b35619739b272, type: 2}
-  targetObject: {fileID: 994532042}
+  targetObject: {fileID: 444660041}
 --- !u!65 &375171591
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3109,7 +3109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: 7593200f9a6bda04ba0f81591f061d93, type: 2}
-  targetObject: {fileID: 994532042}
+  targetObject: {fileID: 444660041}
 --- !u!43 &411232844
 Mesh:
   m_ObjectHideFlags: 0
@@ -3428,7 +3428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: 251deb29901350c4f8b524cdaa6d776f, type: 2}
-  targetObject: {fileID: 994532042}
+  targetObject: {fileID: 753547906}
 --- !u!65 &542739771
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3832,7 +3832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: 7f7ca2b515e4d284c8ec72a88c796965, type: 2}
-  targetObject: {fileID: 994532042}
+  targetObject: {fileID: 444660041}
 --- !u!65 &554839729
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4127,7 +4127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: 04df2d361d4c0e74bafac9f6a84eec43, type: 2}
-  targetObject: {fileID: 994532042}
+  targetObject: {fileID: 444660041}
 --- !u!65 &640654339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4345,6 +4345,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1184918511}
+        m_TargetAssemblyTypeName: SetReferencePrefab, Assembly-CSharp
+        m_MethodName: UpdateReferenceMesh
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   triggerEnterRepeatEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -4407,7 +4419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: 659885f888943d84fa009ccd683a21af, type: 2}
-  targetObject: {fileID: 994532042}
+  targetObject: {fileID: 444660041}
 --- !u!65 &643209206
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4527,7 +4539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: 9146bf52ecb24834496473dd12878039, type: 2}
-  targetObject: {fileID: 994532042}
+  targetObject: {fileID: 444660041}
 --- !u!65 &645276613
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4869,7 +4881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: 05301a4bc0e97d34890ae37ded8d3ee6, type: 2}
-  targetObject: {fileID: 994532042}
+  targetObject: {fileID: 444660041}
 --- !u!65 &681609657
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5693,7 +5705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: 5a6802ce95a99604e8c3bdc4f28a6dd8, type: 2}
-  targetObject: {fileID: 994532042}
+  targetObject: {fileID: 444660041}
 --- !u!65 &745994172
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6414,7 +6426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: 73d62c1811423a44f9f5f82104acc4d6, type: 2}
-  targetObject: {fileID: 994532042}
+  targetObject: {fileID: 444660041}
 --- !u!65 &904354869
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6759,7 +6771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: c1b51027c1b3e224a82e5a3bdb2f25f0, type: 2}
-  targetObject: {fileID: 994532042}
+  targetObject: {fileID: 444660041}
 --- !u!65 &1086339989
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6879,7 +6891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: e21431b2505a1ad4b85e4541148fb3a0, type: 2}
-  targetObject: {fileID: 994532042}
+  targetObject: {fileID: 444660041}
 --- !u!65 &1097943291
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6999,7 +7011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: 832a4dcb0b48412459aeb422e9e06505, type: 2}
-  targetObject: {fileID: 994532042}
+  targetObject: {fileID: 444660041}
 --- !u!65 &1110551946
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7191,8 +7203,7 @@ MonoBehaviour:
   upDownValueData: {fileID: 11400000, guid: f9f73c83f72d1424593d0564bff324ec, type: 2}
   leftRightValueData: {fileID: 11400000, guid: 935d312be817a0541899e62e68a5c494, type: 2}
   spawnPoint: {fileID: 241353180}
-  referenceObject: {fileID: 994532042}
-  referenceSpawnPoint: {fileID: 602458146}
+  referenceObject: {fileID: 444660041}
   prefabCombinations:
   - upDownValue: 1
     leftRightValue: 1
@@ -7323,7 +7334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: e217fa4ab2998cc4babb55ac645bf589, type: 2}
-  targetObject: {fileID: 994532042}
+  targetObject: {fileID: 753547906}
 --- !u!65 &1249157255
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8872,7 +8883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: 6863fda3c03bb0d4b9ed49d363ac2ab4, type: 2}
-  targetObject: {fileID: 994532042}
+  targetObject: {fileID: 444660041}
 --- !u!65 &1448043191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9649,7 +9660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: 509d88e2800648744991a51a5df87b0e, type: 2}
-  targetObject: {fileID: 994532042}
+  targetObject: {fileID: 444660041}
 --- !u!65 &1458510212
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9959,6 +9970,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1184918511}
+        m_TargetAssemblyTypeName: SetReferencePrefab, Assembly-CSharp
+        m_MethodName: UpdateReferenceMesh
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   triggerEnterRepeatEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -10139,7 +10162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: c4afab1b14cb59e4d82b2887ac0e94b0, type: 2}
-  targetObject: {fileID: 994532042}
+  targetObject: {fileID: 444660041}
 --- !u!65 &1610461154
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10619,6 +10642,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1184918511}
+        m_TargetAssemblyTypeName: SetReferencePrefab, Assembly-CSharp
+        m_MethodName: UpdateReferenceMesh
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   triggerEnterRepeatEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -10681,7 +10716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: eac0172b06229de44af2e12636ed19f5, type: 2}
-  targetObject: {fileID: 994532042}
+  targetObject: {fileID: 444660041}
 --- !u!65 &1728783413
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11238,7 +11273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: 78c6106c70235464b8f6d1881598afdd, type: 2}
-  targetObject: {fileID: 994532042}
+  targetObject: {fileID: 444660041}
 --- !u!65 &1851620706
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11531,6 +11566,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: IntData, Assembly-CSharp
         m_MethodName: UpdateValue
         m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1184918511}
+        m_TargetAssemblyTypeName: SetReferencePrefab, Assembly-CSharp
+        m_MethodName: UpdateReferenceMesh
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -12025,7 +12072,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: 340c773d30fba4640a5840c88211dc14, type: 2}
-  targetObject: {fileID: 994532042}
+  targetObject: {fileID: 444660041}
 --- !u!65 &2017609510
 BoxCollider:
   m_ObjectHideFlags: 0
