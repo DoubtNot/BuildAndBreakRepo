@@ -1,52 +1,39 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class BrickParenting : MonoBehaviour
 {
-    public GameObject parentCube;
-
+    public List<GameObject> enteredObjects = new List<GameObject>();
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("TopTrigger"))
+        if (other.CompareTag("Brick"))
         {
-            Transform currentParent = other.transform.parent;
+            // Make the brick a child of the object with the trigger
+            other.transform.parent = transform;
 
-            // Traverse the parent hierarchy until reaching the topmost parent
-            while (currentParent.parent != null)
-            {
-                currentParent = currentParent.parent;
-            }
-
-            // Set the entering object as a child of the topmost parent
-            parentCube.transform.parent = currentParent;
-
-            Rigidbody parentRigidbody = parentCube.GetComponent<Rigidbody>();
-            parentRigidbody.isKinematic = true;
+            // Add the object to the list of entered objects
+            enteredObjects.Add(other.gameObject);
         }
     }
 
 
-    private void OnTriggerExit(Collider other)
+    // Function to unparent all entered objects
+    public void UnparentObjects()
     {
-        if (other.CompareTag("TopTrigger"))
+        // Create a copy of the list to avoid modifying it while iterating
+        List<GameObject> copyOfEnteredObjects = new List<GameObject>(enteredObjects);
+
+        foreach (GameObject enteredObject in copyOfEnteredObjects)
         {
+            // Unparent the object
+            enteredObject.transform.parent = null;
 
-            // Set the entering object as a child of the specified parentCube
-            parentCube.transform.parent = parentCube.transform;
+            // Optionally, you can perform additional actions here if needed
 
-            Rigidbody parentRigidbody = parentCube.GetComponent<Rigidbody>();
-
-            parentRigidbody.isKinematic = false;
-
+            // Remove the object from the list
+            enteredObjects.Remove(enteredObject);
         }
     }
+
 }
-
-
-//Rigidbody parentRigidbody = parentCube.GetComponent<Rigidbody>();
-
-//parentRigidbody.isKinematic = true;
-
-//BoxCollider boxCollider = parentCube.GetComponent<BoxCollider>();
-
-//boxCollider.enabled = true;
