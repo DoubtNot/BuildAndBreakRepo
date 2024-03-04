@@ -14,6 +14,15 @@ public class BrickParenting : MonoBehaviour
 
             // Add the object to the list of entered objects
             enteredObjects.Add(other.gameObject);
+
+            // Get the Rigidbody component of the object entering the trigger
+            Rigidbody otherRigidbody = other.GetComponent<Rigidbody>();
+
+            // Set the isKinematic property to true when the trigger event occurs
+            if (otherRigidbody != null)
+            {
+                otherRigidbody.isKinematic = true;
+            }
         }
     }
 
