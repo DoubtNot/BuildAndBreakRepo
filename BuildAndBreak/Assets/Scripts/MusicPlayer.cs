@@ -1,9 +1,9 @@
 using UnityEngine;
-using System.Collections.Generic;
+using System.Collections;
 
 public class MusicPlayer : MonoBehaviour
 {
-    public List<AudioClip> songs; // List of songs to be played
+    public AudioClip[] songs; // Array of songs to be played
     private AudioSource audioSource;
     private int currentSongIndex = 0;
 
@@ -13,19 +13,13 @@ public class MusicPlayer : MonoBehaviour
         PlaySong(currentSongIndex); // Start playing the first song
     }
 
-    void Update()
-    {
-        // Your code to trigger skip or reverse functions can be placed here
-        // For example, you might use Input.GetKeyDown(KeyCode.Space) to skip a song
-        // or Input.GetKeyDown(KeyCode.Backspace) to go back to the previous song
-    }
-
     void PlaySong(int index)
     {
-        if (index >= 0 && index < songs.Count)
+        if (index >= 0 && index < songs.Length)
         {
             audioSource.clip = songs[index];
             audioSource.Play();
+            StartCoroutine(WaitForSongEnd(audioSource.clip.length)); // Wait for the song to end
         }
         else
         {
@@ -33,10 +27,16 @@ public class MusicPlayer : MonoBehaviour
         }
     }
 
+    IEnumerator WaitForSongEnd(float duration)
+    {
+        yield return new WaitForSecondsRealtime(duration);
+        SkipSong();
+    }
+
     public void SkipSong()
     {
         currentSongIndex++;
-        if (currentSongIndex >= songs.Count)
+        if (currentSongIndex >= songs.Length)
         {
             currentSongIndex = 0; // Loop back to the beginning of the playlist
         }
@@ -48,9 +48,8 @@ public class MusicPlayer : MonoBehaviour
         currentSongIndex--;
         if (currentSongIndex < 0)
         {
-            currentSongIndex = songs.Count - 1; // Go to the last song in the playlist
+            currentSongIndex = songs.Length - 1; // Go to the last song in the playlist
         }
         PlaySong(currentSongIndex);
     }
 }
-
