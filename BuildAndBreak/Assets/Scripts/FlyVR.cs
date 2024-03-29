@@ -33,6 +33,9 @@ public class FlyVR : MonoBehaviour
 
             // Move the player in the direction of the left hand
             transform.position += flyDirection * flyingSpeed * Time.deltaTime;
+
+            // Clamp the Y position to prevent flying below -0.1
+            transform.position = new Vector3(transform.position.x, Mathf.Max(transform.position.y, -0.1f), transform.position.z);
         }
         else
         {
@@ -40,3 +43,4 @@ public class FlyVR : MonoBehaviour
         }
     }
 }
+

@@ -6,11 +6,12 @@ public class MusicPlayer : MonoBehaviour
     public AudioClip[] songs; // Array of songs to be played
     private AudioSource audioSource;
     private int currentSongIndex = 0;
+    private bool isPlaying = false;
+    private Coroutine waitForSongEndCoroutine;
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        PlaySong(currentSongIndex); // Start playing the first song
     }
 
     void PlaySong(int index)
@@ -19,7 +20,10 @@ public class MusicPlayer : MonoBehaviour
         {
             audioSource.clip = songs[index];
             audioSource.Play();
-            StartCoroutine(WaitForSongEnd(audioSource.clip.length)); // Wait for the song to end
+            if (waitForSongEndCoroutine != null)
+                StopCoroutine(waitForSongEndCoroutine); // Stop the previous coroutine if it exists
+            waitForSongEndCoroutine = StartCoroutine(WaitForSongEnd(audioSource.clip.length)); // Wait for the song to end
+            isPlaying = true;
         }
         else
         {
@@ -30,7 +34,10 @@ public class MusicPlayer : MonoBehaviour
     IEnumerator WaitForSongEnd(float duration)
     {
         yield return new WaitForSecondsRealtime(duration);
-        SkipSong();
+        if (isPlaying)
+        {
+            SkipSong();
+        }
     }
 
     public void SkipSong()
@@ -51,5 +58,19 @@ public class MusicPlayer : MonoBehaviour
             currentSongIndex = songs.Length - 1; // Go to the last song in the playlist
         }
         PlaySong(currentSongIndex);
+    }
+
+    public void BeginPlaying()
+    {
+        PlaySong(currentSongIndex);
+        isPlaying = true;
+    }
+
+    public void StopPlaying()
+    {
+        audioSource.Stop();
+        isPlaying = false;
+        if (waitForSongEndCoroutine != null)
+            StopCoroutine(waitForSongEndCoroutine); // Stop the coroutine when stopping playing
     }
 }
