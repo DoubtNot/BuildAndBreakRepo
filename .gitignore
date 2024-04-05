@@ -120,3 +120,7 @@ BuildAndBreak/Assets/Models/Brick Gunooo.obj
 BuildAndBreak/Assets/Models/Brick_Island.obj
 
 BuildAndBreak/Assets/Models/Brick_Radio.obj
+
+*.aiff
+
+*.keystore
