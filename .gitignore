@@ -124,3 +124,7 @@ BuildAndBreak/Assets/Models/Brick_Radio.obj
 *.aiff
 
 *.keystore
+
+*.wav
+
+BuildAndBreak/Assets/Models/Brick_TVOld.obj

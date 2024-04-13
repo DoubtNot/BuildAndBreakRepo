@@ -4,6 +4,7 @@ using System.Collections;
 public class ReturnToOriginalPosition : MonoBehaviour
 {
     public Transform originalPosition;
+    public Rigidbody rb; // Reference to the Rigidbody component
 
     private Vector3 initialPosition;
     private Quaternion initialRotation;
@@ -27,5 +28,14 @@ public class ReturnToOriginalPosition : MonoBehaviour
         // Reset to original position and rotation
         transform.position = originalPosition.position;
         transform.rotation = originalPosition.rotation;
+
+        // Freeze the movement by making the Rigidbody kinematic
+        rb.isKinematic = true;
+
+        // Delay for 0.1 seconds
+        yield return new WaitForSeconds(0.1f);
+
+        // Unfreeze the Rigidbody after a short delay
+        rb.isKinematic = false;
     }
 }

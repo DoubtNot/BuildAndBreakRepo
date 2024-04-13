@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class MusicPlayer : MonoBehaviour
 {
@@ -31,7 +30,7 @@ public class MusicPlayer : MonoBehaviour
         }
     }
 
-    IEnumerator WaitForSongEnd(float duration)
+    System.Collections.IEnumerator WaitForSongEnd(float duration)
     {
         yield return new WaitForSecondsRealtime(duration);
         if (isPlaying)

@@ -16,8 +16,14 @@ public class SetReferencePrefab : MonoBehaviour
     public Transform spawnPoint;
     public GameObject referenceObject;
 
-    // Define a list of prefab combinations
-    public PrefabCombination[] prefabCombinations;
+    // Define arrays of prefab combinations for each group
+    public PrefabCombination[] prefabCombinationsGroup1;
+    public PrefabCombination[] prefabCombinationsGroup2;
+    public PrefabCombination[] prefabCombinationsGroup3;
+    public PrefabCombination[] prefabCombinationsGroup4;
+
+    // Current group index
+    private int currentGroupIndex = 0;
 
     private void Start()
     {
@@ -32,6 +38,8 @@ public class SetReferencePrefab : MonoBehaviour
         // Get the values from the ScriptableObjects
         int upDownValue = upDownValueData.Value;
         int leftRightValue = leftRightValueData.Value;
+
+        PrefabCombination[] prefabCombinations = GetCurrentPrefabCombinations();
 
         // Find the prefab combination in the array
         PrefabCombination selectedCombination = System.Array.Find(prefabCombinations,
@@ -54,6 +62,31 @@ public class SetReferencePrefab : MonoBehaviour
         return null;
     }
 
+    // Method to get the current set of prefab combinations based on the current group index
+    private PrefabCombination[] GetCurrentPrefabCombinations()
+    {
+        switch (currentGroupIndex)
+        {
+            case 0:
+                return prefabCombinationsGroup1;
+            case 1:
+                return prefabCombinationsGroup2;
+            case 2:
+                return prefabCombinationsGroup3;
+            case 3:
+                return prefabCombinationsGroup4;
+            default:
+                return null;
+        }
+    }
+
+    // Method to cycle through different groups of prefabs
+    public void CyclePrefabGroups()
+    {
+        currentGroupIndex = (currentGroupIndex + 1) % 4; // Cycling through four groups
+        // Update the reference mesh when cycling through prefab groups
+        UpdateReferenceMesh();
+    }
 
     public void SpawnObject()
     {
