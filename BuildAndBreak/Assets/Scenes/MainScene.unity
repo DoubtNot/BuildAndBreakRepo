@@ -3693,6 +3693,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BananaRug (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6289539495628840430, guid: c04b288a82a4e3e4c91c5a75a43fc8ad, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e7358d077ffe6ab4baa94b0cb75325f2, type: 2}
     - target: {fileID: 8206152999499826166, guid: c04b288a82a4e3e4c91c5a75a43fc8ad, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -4297,6 +4301,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BananaRug
       objectReference: {fileID: 0}
+    - target: {fileID: 6289539495628840430, guid: c04b288a82a4e3e4c91c5a75a43fc8ad, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e7358d077ffe6ab4baa94b0cb75325f2, type: 2}
     - target: {fileID: 8206152999499826166, guid: c04b288a82a4e3e4c91c5a75a43fc8ad, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -6580,6 +6588,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DonationHands
       objectReference: {fileID: 0}
+    - target: {fileID: 8004537395834564576, guid: 2acc74a0b70a0a54893cff3efc5dd754, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3637b758ff163493f8bb8b6d7e96d7ae, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7522,8 +7534,8 @@ MonoBehaviour:
 
     xoxo, Devs'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8617,7 +8629,7 @@ MonoBehaviour:
   m_SnapToColliderVolume: 1
   m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 0
+  m_MovementType: 2
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
