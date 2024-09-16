@@ -3,7 +3,7 @@ using UnityEngine;
 public class SnapToObjectPoints : MonoBehaviour
 {
     [SerializeField] private Transform otherTransform;
-    [SerializeField] private float snapScaleX = 0.025, snapScaleY = 0.025, snapScaleZ = 0.025;
+    [SerializeField] private float snapScaleX = 1, snapScaleY = 1, snapScaleZ = 1;
     private float posX, otherX, posY, otherY, posZ, otherZ;
 
     void Update()

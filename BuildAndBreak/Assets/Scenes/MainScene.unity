@@ -210,7 +210,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -1135,6 +1135,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 11f1124965995744db4ed7d0ecb0cf9c, type: 3}
       propertyPath: m_Name
       value: Brick_122 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 11f1124965995744db4ed7d0ecb0cf9c, type: 3}
+      propertyPath: m_TagString
+      value: Brick
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2650,7 +2654,7 @@ GameObject:
   - component: {fileID: 306570401}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2868,7 +2872,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 306570399}
-  m_Material: {fileID: 13400000, guid: be4e441c9d318e444ae68536abeafb4c, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2880,8 +2884,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.1, y: 0.05, z: 0.1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.1, y: 0.024610043, z: 0.04981102}
+  m_Center: {x: 0, y: 0.00009846687, z: 0.00009839982}
 --- !u!1 &315585280
 GameObject:
   m_ObjectHideFlags: 0
@@ -8399,11 +8403,10 @@ GameObject:
   - component: {fileID: 1138125799}
   - component: {fileID: 1138125802}
   - component: {fileID: 1138125801}
-  - component: {fileID: 1138125803}
   - component: {fileID: 1138125804}
   m_Layer: 0
   m_Name: BuildCollider
-  m_TagString: Untagged
+  m_TagString: Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8448,7 +8451,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!65 &1138125802
 BoxCollider:
@@ -8457,7 +8460,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1138125798}
-  m_Material: {fileID: 13400000, guid: be4e441c9d318e444ae68536abeafb4c, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -8469,20 +8472,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.09988761, y: 0.05, z: 0.09954983}
-  m_Center: {x: -0.000041604042, y: 0, z: -0.00012752414}
---- !u!114 &1138125803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138125798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d20989760f58f741888e20febd5999c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Size: {x: 0.09988761, y: 0.025200844, z: 0.050148174}
+  m_Center: {x: -0.000041604042, y: 0, z: 0.00016770512}
 --- !u!114 &1138125804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8557,37 +8548,13 @@ MonoBehaviour:
       m_Calls: []
   m_FocusEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1138125803}
-        m_TargetAssemblyTypeName: SimpleRotation, Assembly-CSharp
-        m_MethodName: RotateY
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_FocusExited:
     m_PersistentCalls:
       m_Calls: []
   m_Activated:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1138125803}
-        m_TargetAssemblyTypeName: SimpleRotation, Assembly-CSharp
-        m_MethodName: RotateZ
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -9155,7 +9122,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -9703,7 +9670,7 @@ Transform:
   m_GameObject: {fileID: 1262926848}
   serializedVersion: 2
   m_LocalRotation: {x: -0.20969409, y: -0.008573122, z: 0.026620349, w: 0.97736704}
-  m_LocalPosition: {x: -0.9, y: 2.17, z: 1.09}
+  m_LocalPosition: {x: -0.0441, y: 0.1136, z: 0.0672}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9734,7 +9701,7 @@ Transform:
   m_GameObject: {fileID: 1265771287}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.03, z: 3.337}
+  m_LocalPosition: {x: 0, y: 0.1576, z: 0.184}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13371,7 +13338,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -15601,7 +15568,7 @@ GameObject:
   - component: {fileID: 2076689185}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15819,7 +15786,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2076689183}
-  m_Material: {fileID: 13400000, guid: be4e441c9d318e444ae68536abeafb4c, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -15831,8 +15798,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.1, y: 0.05, z: 0.1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.1, y: 0.02500391, z: 0.04981102}
+  m_Center: {x: 0, y: 0.00009846687, z: 0.00009839982}
 --- !u!1 &2081743459
 GameObject:
   m_ObjectHideFlags: 0
