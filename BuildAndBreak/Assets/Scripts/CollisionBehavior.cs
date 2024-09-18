@@ -11,6 +11,9 @@ public class CollisionBehavior : MonoBehaviour
     public bool canRepeat;
     public int repeatTimes = 10;
 
+    // Variable to specify a tag for collision detection
+    [SerializeField] private string collisionTag = ""; // If empty, it won't filter by tag
+
     protected virtual void Awake()
     {
         waitForCollisionEnterObj = new WaitForSeconds(collisionHoldTime);
@@ -19,30 +22,38 @@ public class CollisionBehavior : MonoBehaviour
 
     private IEnumerator OnCollisionEnter(Collision collision)
     {
-        yield return waitForCollisionEnterObj;
-        collisionEnterEvent.Invoke();
-        if (collisionEnterAction != null) collisionEnterAction.RaiseNoArgs();
-
-        if (canRepeat)
+        // Check if a tag is specified, and if so, ensure the collided object has that tag
+        if (string.IsNullOrEmpty(collisionTag) || collision.gameObject.CompareTag(collisionTag))
         {
-            var i = 0;
-            while (i < repeatTimes)
-            {
-                yield return waitForCollisionEnterObj;
-                i++;
-                collisionEnterRepeatEvent.Invoke();
-                if (collisionEnterRepeatAction != null) collisionEnterRepeatAction.RaiseNoArgs();
-            }
-        }
+            yield return waitForCollisionEnterObj;
+            collisionEnterEvent.Invoke();
+            if (collisionEnterAction != null) collisionEnterAction.RaiseNoArgs();
 
-        yield return waitForCollisionRepeatObj;
-        collisionEnterEndEvent.Invoke();
-        if (collisionEnterEndAction != null) collisionEnterEndAction.RaiseNoArgs();
+            if (canRepeat)
+            {
+                var i = 0;
+                while (i < repeatTimes)
+                {
+                    yield return waitForCollisionEnterObj;
+                    i++;
+                    collisionEnterRepeatEvent.Invoke();
+                    if (collisionEnterRepeatAction != null) collisionEnterRepeatAction.RaiseNoArgs();
+                }
+            }
+
+            yield return waitForCollisionRepeatObj;
+            collisionEnterEndEvent.Invoke();
+            if (collisionEnterEndAction != null) collisionEnterEndAction.RaiseNoArgs();
+        }
     }
 
     private void OnCollisionExit(Collision collision)
     {
-        collisionExitEvent.Invoke();
-        if (collisionExitAction != null) collisionExitAction.RaiseNoArgs();
+        // Check if a tag is specified for exit, and if so, ensure the collided object has that tag
+        if (string.IsNullOrEmpty(collisionTag) || collision.gameObject.CompareTag(collisionTag))
+        {
+            collisionExitEvent.Invoke();
+            if (collisionExitAction != null) collisionExitAction.RaiseNoArgs();
+        }
     }
 }
