@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 4652014446958969276}
   - component: {fileID: 2001192387567779249}
   - component: {fileID: 3557878289162265562}
+  - component: {fileID: 1543047064244203635}
+  - component: {fileID: 8407382948191255690}
   m_Layer: 0
   m_Name: WoodPlank
   m_TagString: Wood
@@ -133,3 +135,63 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1543047064244203635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8771605513850029344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 293d4019d78d79046bb6ae58ada374b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionEnterAction: {fileID: 0}
+  collisionEnterRepeatAction: {fileID: 0}
+  collisionEnterEndAction: {fileID: 0}
+  collisionExitAction: {fileID: 0}
+  collisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8771605513850029344}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  collisionEnterRepeatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  collisionEnterEndEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  collisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  collisionHoldTime: 0.01
+  repeatHoldTime: 0.01
+  exitHoldTime: 0.01
+  canRepeat: 0
+  repeatTimes: 10
+  collisionTag: Bullet
+--- !u!114 &8407382948191255690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8771605513850029344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbf9aa42871fe34eabef3388135e472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalPosition: {fileID: 0}
+  rb: {fileID: 3557878289162265562}

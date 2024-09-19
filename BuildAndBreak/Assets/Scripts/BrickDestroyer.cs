@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class BrickDestroyer : MonoBehaviour
 {
+    // Reference to the particle system prefab
+    public GameObject brickDestroyParticlePrefab;
+
     // Function to destroy all objects with the tag "Brick"
     public void DestroyAllBricks()
     {
@@ -33,18 +36,30 @@ public class BrickDestroyer : MonoBehaviour
             // Ensure the root object is the intended parent
             if (rootObject.CompareTag("Brick"))
             {
+                // Instantiate the particle system at the brick's position
+                if (brickDestroyParticlePrefab != null)
+                {
+                    GameObject particleSystemInstance = Instantiate(
+                        brickDestroyParticlePrefab,
+                        brick.transform.position,
+                        Quaternion.identity
+                    );
+
+                    // Get the ParticleSystem component and play the effect
+                    ParticleSystem ps = particleSystemInstance.GetComponent<ParticleSystem>();
+                    if (ps != null)
+                    {
+                        ps.Play();
+
+                        // Destroy the particle system after its duration
+                        Destroy(particleSystemInstance, ps.main.duration);
+                    }
+                }
+               
                 // Destroy the root (most parent) object
                 Destroy(rootObject);
                 Debug.Log("Parent object of the brick destroyed.");
             }
-            else
-            {
-                Debug.LogWarning("The root object is not tagged as Brick.");
-            }
-        }
-        else
-        {
-            Debug.LogWarning("The collided object is not tagged as Brick.");
         }
     }
 }

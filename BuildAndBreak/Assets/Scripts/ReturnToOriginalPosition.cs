@@ -36,6 +36,6 @@ public class ReturnToOriginalPosition : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
 
         // Unfreeze the Rigidbody after a short delay
-        rb.isKinematic = false;
+        rb.isKinematic = true;
     }
 }

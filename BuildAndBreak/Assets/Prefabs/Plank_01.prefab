@@ -70,6 +70,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ea4a88ccaea3a7748afff5e4321729fd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1883518296199916930}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ea4a88ccaea3a7748afff5e4321729fd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 419740291864692194}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ea4a88ccaea3a7748afff5e4321729fd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3633963606456493998}
   m_SourcePrefab: {fileID: 100100000, guid: ea4a88ccaea3a7748afff5e4321729fd, type: 3}
 --- !u!1 &8357967359664641131 stripped
 GameObject:
@@ -124,3 +130,63 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 6.7492213, y: 0.21180019, z: 1}
   m_Center: {x: -0.03477359, y: -0.011591211, z: 0}
+--- !u!114 &419740291864692194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8357967359664641131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbf9aa42871fe34eabef3388135e472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalPosition: {fileID: 0}
+  rb: {fileID: 3453858179694757360}
+--- !u!114 &3633963606456493998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8357967359664641131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 293d4019d78d79046bb6ae58ada374b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionEnterAction: {fileID: 0}
+  collisionEnterRepeatAction: {fileID: 0}
+  collisionEnterEndAction: {fileID: 0}
+  collisionExitAction: {fileID: 0}
+  collisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 419740291864692194}
+        m_TargetAssemblyTypeName: ReturnToOriginalPosition, Assembly-CSharp
+        m_MethodName: ResetPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  collisionEnterRepeatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  collisionEnterEndEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  collisionExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  collisionHoldTime: 0.01
+  repeatHoldTime: 0.01
+  exitHoldTime: 0.01
+  canRepeat: 0
+  repeatTimes: 10
+  collisionTag: Bullet
