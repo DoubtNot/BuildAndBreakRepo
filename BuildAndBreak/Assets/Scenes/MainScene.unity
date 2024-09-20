@@ -4147,6 +4147,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BananaRug (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1844536353261681566, guid: c04b288a82a4e3e4c91c5a75a43fc8ad, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e7358d077ffe6ab4baa94b0cb75325f2, type: 2}
     - target: {fileID: 6289539495628840430, guid: c04b288a82a4e3e4c91c5a75a43fc8ad, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -4755,6 +4759,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BananaRug
       objectReference: {fileID: 0}
+    - target: {fileID: 1844536353261681566, guid: c04b288a82a4e3e4c91c5a75a43fc8ad, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e7358d077ffe6ab4baa94b0cb75325f2, type: 2}
     - target: {fileID: 6289539495628840430, guid: c04b288a82a4e3e4c91c5a75a43fc8ad, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
