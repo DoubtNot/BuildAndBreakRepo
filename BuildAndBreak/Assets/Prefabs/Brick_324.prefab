@@ -446,9 +446,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   otherTransform: {fileID: 2099010751376169837}
-  snapScaleX: 0.0125
-  snapScaleY: 0.0125
-  snapScaleZ: 0.0125
+  snapScaleX: 0.00625
+  snapScaleY: 0.00625
+  snapScaleZ: 0.00625
 --- !u!4 &4574000443639407178 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 11f1124965995744db4ed7d0ecb0cf9c, type: 3}
