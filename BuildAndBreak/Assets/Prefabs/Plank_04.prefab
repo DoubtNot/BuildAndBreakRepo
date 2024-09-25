@@ -175,7 +175,7 @@ MonoBehaviour:
   exitHoldTime: 0.01
   canRepeat: 0
   repeatTimes: 10
-  collisionTag: Bullet
+  collisionTag: Untagged
 --- !u!114 &2411207049281632297
 MonoBehaviour:
   m_ObjectHideFlags: 0
