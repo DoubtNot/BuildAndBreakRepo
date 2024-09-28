@@ -189,4 +189,4 @@ MonoBehaviour:
   exitHoldTime: 0.01
   canRepeat: 0
   repeatTimes: 10
-  collisionTag: Bullet
+  collisionTag: Untagged
