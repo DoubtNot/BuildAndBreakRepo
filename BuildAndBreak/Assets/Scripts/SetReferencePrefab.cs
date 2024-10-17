@@ -35,6 +35,13 @@ public class SetReferencePrefab : MonoBehaviour
     // You can use this method to set the prefab based on UpDownValue and LeftRightValue
     public GameObject SetPrefab()
     {
+        // If we're in group 4 (index 3), set both upDownValue and leftRightValue to 1
+        if (currentGroupIndex == 3)
+        {
+            upDownValueData.Value = 1;
+            leftRightValueData.Value = 1;
+        }
+
         // Get the values from the ScriptableObjects
         int upDownValue = upDownValueData.Value;
         int leftRightValue = leftRightValueData.Value;

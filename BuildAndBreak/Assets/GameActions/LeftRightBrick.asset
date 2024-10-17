@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 5
   minValue: 1
-  maxValue: 5
+  maxValue: 10
   valueOutOfRange:
     m_PersistentCalls:
       m_Calls: []
