@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3284232921537539426}
   - component: {fileID: 31560975519959016}
   - component: {fileID: 865720501397834922}
-  - component: {fileID: 1252662886443794689}
+  - component: {fileID: 2528738665550390747}
   m_Layer: 0
   m_Name: PreviousButton
   m_TagString: Untagged
@@ -106,7 +106,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1252662886443794689
+--- !u!114 &2528738665550390747
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 89630531725679203}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a28a400391344b9c88e28b4820b5ed7, type: 3}
+  m_Script: {fileID: 11500000, guid: 127de120145743f47a522669b56748a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startHoldTime: 0.1
@@ -160,7 +160,7 @@ MonoBehaviour:
   exitHoldTime: 0.01
   canRepeat: 0
   repeatTimes: 10
-  filterTag: Hand
+  filterTag: PointerFinger
 --- !u!1 &936796632524309812
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,8 +187,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7293472790070960419}
   m_Father: {fileID: 0}
@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 49530446379356829}
   - component: {fileID: 4239757307899303225}
   - component: {fileID: 1214219199319747473}
-  - component: {fileID: 5105072920011214175}
+  - component: {fileID: 6120964134980747063}
   m_Layer: 0
   m_Name: PlayButton
   m_TagString: Untagged
@@ -362,7 +362,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5105072920011214175
+--- !u!114 &6120964134980747063
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -371,7 +371,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5718440702659606091}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a28a400391344b9c88e28b4820b5ed7, type: 3}
+  m_Script: {fileID: 11500000, guid: 127de120145743f47a522669b56748a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startHoldTime: 0.1
@@ -416,7 +416,7 @@ MonoBehaviour:
   exitHoldTime: 0.01
   canRepeat: 0
   repeatTimes: 10
-  filterTag: Hand
+  filterTag: PointerFinger
 --- !u!1 &7821046501031827446
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,7 +534,7 @@ GameObject:
   - component: {fileID: 4825625839101295360}
   - component: {fileID: 3845188008247089319}
   - component: {fileID: 7844062470717100001}
-  - component: {fileID: 4093618915908415209}
+  - component: {fileID: 7320601219090402502}
   m_Layer: 0
   m_Name: SkipButton
   m_TagString: Untagged
@@ -628,7 +628,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4093618915908415209
+--- !u!114 &7320601219090402502
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -637,7 +637,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8050372928901648983}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a28a400391344b9c88e28b4820b5ed7, type: 3}
+  m_Script: {fileID: 11500000, guid: 127de120145743f47a522669b56748a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startHoldTime: 0.1
@@ -682,7 +682,7 @@ MonoBehaviour:
   exitHoldTime: 0.01
   canRepeat: 0
   repeatTimes: 10
-  filterTag: Hand
+  filterTag: PointerFinger
 --- !u!1 &8766595329956892246
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,7 +695,7 @@ GameObject:
   - component: {fileID: 1970607706318025479}
   - component: {fileID: 84012535302855117}
   - component: {fileID: 8676324068903930180}
-  - component: {fileID: 5841146789721420179}
+  - component: {fileID: 6535966409703251874}
   m_Layer: 0
   m_Name: StopButton
   m_TagString: Untagged
@@ -789,7 +789,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5841146789721420179
+--- !u!114 &6535966409703251874
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -798,7 +798,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8766595329956892246}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a28a400391344b9c88e28b4820b5ed7, type: 3}
+  m_Script: {fileID: 11500000, guid: 127de120145743f47a522669b56748a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startHoldTime: 0.1
@@ -843,7 +843,7 @@ MonoBehaviour:
   exitHoldTime: 0.01
   canRepeat: 0
   repeatTimes: 10
-  filterTag: Hand
+  filterTag: PointerFinger
 --- !u!1001 &7114886560127207112
 PrefabInstance:
   m_ObjectHideFlags: 0
