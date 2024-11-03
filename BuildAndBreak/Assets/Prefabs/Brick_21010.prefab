@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8589157236114734558}
   m_Layer: 6
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -387,6 +387,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b6bca8046f8db364eb8a7ffa02b5736a, type: 3}
       propertyPath: m_TagString
+      value: Brick
+      objectReference: {fileID: 0}
+    - target: {fileID: 5516454584835741323, guid: b6bca8046f8db364eb8a7ffa02b5736a, type: 3}
+      propertyPath: m_Name
       value: Brick
       objectReference: {fileID: 0}
     - target: {fileID: 5516454584835741323, guid: b6bca8046f8db364eb8a7ffa02b5736a, type: 3}

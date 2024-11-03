@@ -8,16 +8,24 @@ public class BrickData
     public float posX;
     public float posY;
     public float posZ;
-    public string brickType; // Property for brick type
-    public string materialName; // Property for the material name
+    public float rotX;
+    public float rotY;
+    public float rotZ;
+    public float rotW;
+    public string brickType;
+    public string materialName;
 
-    public BrickData(Vector3 position, string type, string matName)
+    public BrickData(Vector3 position, Quaternion rotation, string type, string matName)
     {
         posX = position.x;
         posY = position.y;
         posZ = position.z;
-        brickType = type; // Assign type
-        materialName = matName; // Assign material name
+        rotX = rotation.x;
+        rotY = rotation.y;
+        rotZ = rotation.z;
+        rotW = rotation.w;
+        brickType = type;
+        materialName = matName;
     }
 }
 
@@ -29,10 +37,8 @@ public class BrickSaveData
 
 public class BrickManager : MonoBehaviour
 {
-    public GameObject[] brickPrefabs; // Array to hold different types of brick prefabs
+    public GameObject[] brickPrefabs;
     private const string SaveFilePath = "BrickSaveData.json";
-
-    // List of suffixes to remove
     private static readonly string[] suffixesToRemove = { "(Clone)", "(Instance)", " (Instance)" };
 
     private void Start()
@@ -56,13 +62,13 @@ public class BrickManager : MonoBehaviour
             if (IsMostParent(brick))
             {
                 Vector3 position = brick.transform.position;
-                string type = brick.name.Replace("(Clone)", "").Trim(); // Remove "(Clone)" and trim spaces
+                Quaternion rotation = brick.transform.rotation;
+                string type = brick.name.Replace("(Clone)", "").Trim();
 
-                // Find the child object named "Brick"
                 Transform childBrick = brick.transform.Find("Brick");
-                string materialName = childBrick != null ? GetMaterialName(childBrick) : ""; // Get the currently applied material name
+                string materialName = childBrick != null ? GetMaterialName(childBrick) : "";
 
-                saveData.bricks.Add(new BrickData(position, type, materialName));
+                saveData.bricks.Add(new BrickData(position, rotation, type, materialName));
             }
         }
 
@@ -85,10 +91,10 @@ public class BrickManager : MonoBehaviour
                 GameObject brickPrefab = GetBrickPrefabByType(brickData.brickType);
                 if (brickPrefab != null)
                 {
-                    GameObject newBrick = Instantiate(brickPrefab, new Vector3(brickData.posX, brickData.posY, brickData.posZ), Quaternion.identity);
-                    newBrick.tag = "Brick"; // Ensure the instantiated brick has the correct tag
+                    Quaternion rotation = new Quaternion(brickData.rotX, brickData.rotY, brickData.rotZ, brickData.rotW);
+                    GameObject newBrick = Instantiate(brickPrefab, new Vector3(brickData.posX, brickData.posY, brickData.posZ), rotation);
+                    newBrick.tag = "Brick";
 
-                    // Set the material of the child named "Brick"
                     Transform childBrick = newBrick.transform.Find("Brick");
                     if (childBrick != null && !string.IsNullOrEmpty(brickData.materialName))
                     {
@@ -107,11 +113,9 @@ public class BrickManager : MonoBehaviour
 
     private string GetMaterialName(Transform childBrick)
     {
-        // Get the material name from the Renderer component
         Renderer renderer = childBrick.GetComponent<Renderer>();
         if (renderer != null && renderer.material != null)
         {
-            // Return the name of the material without any unwanted suffixes
             return CleanMaterialName(renderer.material.name);
         }
         return "";
@@ -119,7 +123,6 @@ public class BrickManager : MonoBehaviour
 
     private string CleanMaterialName(string materialName)
     {
-        // Remove defined suffixes
         foreach (string suffix in suffixesToRemove)
         {
             if (materialName.EndsWith(suffix))
@@ -132,14 +135,13 @@ public class BrickManager : MonoBehaviour
 
     private void SetMaterial(Transform childBrick, string materialName)
     {
-        // Find the material by name and apply it
         Material material = Resources.Load<Material>(materialName);
         if (material != null)
         {
             Renderer renderer = childBrick.GetComponent<Renderer>();
             if (renderer != null)
             {
-                renderer.material = material; // Set the material on the child object
+                renderer.material = material;
             }
         }
         else
@@ -150,10 +152,9 @@ public class BrickManager : MonoBehaviour
 
     private GameObject GetBrickPrefabByType(string type)
     {
-        // Search for the appropriate prefab based on the type
         foreach (GameObject prefab in brickPrefabs)
         {
-            if (prefab.name == type) // Match prefab name to the type identifier
+            if (prefab.name == type)
             {
                 return prefab;
             }

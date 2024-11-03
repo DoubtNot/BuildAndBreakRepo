@@ -378,6 +378,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -424732846972015630, guid: 5479a4fb99bbcba4dbaf8907e1dbde3d, type: 3}
+      propertyPath: m_Name
+      value: Brick
+      objectReference: {fileID: 0}
+    - target: {fileID: -424732846972015630, guid: 5479a4fb99bbcba4dbaf8907e1dbde3d, type: 3}
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
