@@ -338,6 +338,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8799737370634614318, guid: 03cb947a5d7420446920bfcdcd0fd69b, type: 3}
+      propertyPath: m_Name
+      value: Brick
+      objectReference: {fileID: 0}
+    - target: {fileID: -8799737370634614318, guid: 03cb947a5d7420446920bfcdcd0fd69b, type: 3}
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}

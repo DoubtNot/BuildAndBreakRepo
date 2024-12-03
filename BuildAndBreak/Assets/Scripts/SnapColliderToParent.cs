@@ -13,6 +13,9 @@ public class SnapColliderToParent : MonoBehaviour
         {
             // Snap the position of objectToSnap to targetObject
             objectToSnap.position = targetObject.position;
+
+            objectToSnap.rotation = targetObject.rotation;
+
         }
         else
         {

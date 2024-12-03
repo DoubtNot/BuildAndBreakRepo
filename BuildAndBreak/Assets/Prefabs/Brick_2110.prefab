@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5849176672497359739}
   m_Layer: 6
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -376,6 +376,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f229fbb8ef49d294680904a654823ed0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1095121093054999382, guid: f229fbb8ef49d294680904a654823ed0, type: 3}
+      propertyPath: m_Name
+      value: Brick
       objectReference: {fileID: 0}
     - target: {fileID: -1095121093054999382, guid: f229fbb8ef49d294680904a654823ed0, type: 3}
       propertyPath: m_Layer
