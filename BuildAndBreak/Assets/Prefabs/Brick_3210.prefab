@@ -385,6 +385,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 561476510746707713, guid: 2187d44f8057397439ce35117ace6d76, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -3479847645020447169, guid: 9b2b3ea9ff68aca45a7cb3649943ad0c, type: 3}
     - target: {fileID: 919132149155446097, guid: 2187d44f8057397439ce35117ace6d76, type: 3}
       propertyPath: m_Name
       value: Brick_3210

@@ -397,6 +397,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Brick
       objectReference: {fileID: 0}
+    - target: {fileID: 7670801623888625368, guid: e4f0e3d9453408d44977b869ec949b9d, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 6627168819271805350, guid: 2dc5c312f7f681c4b95b81b037e40017, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

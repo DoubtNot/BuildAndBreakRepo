@@ -377,6 +377,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -537586829165987413, guid: 80b3c49eaf4ee8e4aa5342984bd4d838, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -7111916718430103318, guid: bc02954ffefd7db4fae7334b3016b098, type: 3}
     - target: {fileID: 919132149155446097, guid: 80b3c49eaf4ee8e4aa5342984bd4d838, type: 3}
       propertyPath: m_Name
       value: Brick_278

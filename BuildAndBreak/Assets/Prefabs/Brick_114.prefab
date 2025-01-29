@@ -412,7 +412,7 @@ PrefabInstance:
     - target: {fileID: 2888846204489785277, guid: 11f1124965995744db4ed7d0ecb0cf9c, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 916334918972839445, guid: c394537966a27f641baf951f45079dd7, type: 3}
+      objectReference: {fileID: -2074890640451838920, guid: 1c6960053b255e744af6e9519b15681d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
