@@ -130,3 +130,5 @@ BuildAndBreak/Assets/Models/Brick_Radio.obj
 BuildAndBreak/Assets/Models/Brick_TVOld.obj
 
 *.png~
+
+*.fbx
